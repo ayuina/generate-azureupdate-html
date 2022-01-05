@@ -11,6 +11,18 @@
     .PARAMETER to
     Filter option to date, this parameter require only date part and ignore time part
     
+    .INPUTS
+    None.
+    
+    .OUTPUTS
+    None, this script outputs html file in current directory.
+
+    .EXAMPLE
+    PS> .\list-azupdate.ps1 -from "2021/11/01" -to "2021/11/30"
+
+    .LINK
+    Original source: https://azure.microsoft.com/ja-jp/updates/
+
 #>
 
 [CmdletBinding()]
