@@ -52,9 +52,9 @@ function Main
         -Title $pagetitle `
         -PreContent "<h1>$pagetitle</h1> generated at ${timestamp} <hr/>" `
         -Property ( 
-            @{name = 'LastUpdate'; expr={$_.pubDate} },
-            @{name = 'Title'; expr={ "<a href='$($_.link)'>$($_.title)</a>" } },  
-            @{name = 'Description'; expr={ $_.description } }  
+            @{name = 'LastUpdate'; expr={[System.Environment]::NewLine + $_.pubDate  } },
+            @{name = 'Title'; expr={[System.Environment]::NewLine + "<a href='$($_.link)'>$($_.title)</a>"  } },  
+            @{name = 'Description'; expr={[System.Environment]::NewLine + $_.description  } }  
         )
 
     $htmlfile = ".\${pagetitle}.htm"
